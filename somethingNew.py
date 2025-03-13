@@ -1,18 +1,18 @@
 orderedNumber = int(input("Вибери значення більше 0:"))
 
 while True:
-    quessingNumber = int(input("Вгадай число тепер, урод:"))
+    quessingNumber = int(input("Вгадай число тепер:"))
 
     if quessingNumber == orderedNumber:
         print("Вгадала, сучка")
         break
     if quessingNumber > orderedNumber:
-        print("Дохуя, давай спочатку")
+        print("Багато, давай спочатку")
     else:
         print("Не, не в ту сторону вгадуєш")
 
 secPart = input("Напиши що хочеш :")
 if len(secPart) > 15:
-    print("Дохуя хочеш")
+    print("Багато хочеш")
 else:
-    print("обво'язково зроблю це, муділа")
+    print("обво'язково зроблю це")
