@@ -8,16 +8,16 @@ while True:
     if  len(cleared_given_number) == 10:
        if cleared_given_number[0:3] in valid_codes:
            print("можливо правильний номер, не дописав валідації ще")
+           break
        else:
            print("Невалідний номер, введи ще раз:")
-           break
 
     elif len(cleared_given_number) == 12 and cleared_given_number.startswith("380"):
-        if cleared_given_number in valid_codes:
-            print("можливо правильний номер")
+        if cleared_given_number[2:5] in valid_codes:
+            print("можливо правильний номер, не дописав валідації ще")
+            break
         else:
            print("Невалідний номер, введи ще раз:")
-           break
     else:
-        print("Невалідний номер, введи ще раз:")
+        print("Невалідний номер, введіть ще раз:")
 
