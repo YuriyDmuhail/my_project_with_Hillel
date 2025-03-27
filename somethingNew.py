@@ -1,3 +1,5 @@
+from telegram_bot.bot_tlg  import send_telegram_message
+
 orderedNumber = int(input("Вибери значення більше 0:"))
 
 while True:

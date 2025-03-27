@@ -9,17 +9,17 @@ while True:
 
     if  len(cleared_given_number) == 10:
        if cleared_given_number[0:3] in valid_codes:
-           print("можливо правильний номер, не дописав валідації ще")
+           send_telegram_message("можливо правильний номер, не дописав валідації ще")
            break
        else:
-           print("Невалідний номер.")
+           send_telegram_message("Невалідний номер.")
 
     elif len(cleared_given_number) == 12 and cleared_given_number.startswith("380"):
         if cleared_given_number[2:5] in valid_codes:
-            print("можливо правильний номер, не дописав валідації ще")
+            send_telegram_message("можливо правильний номер, не дописав валідації ще")
             break
         else:
-           print("Невалідний номер, введи ще раз:")
+           send_telegram_message("Невалідний номер, введи ще раз:")
     else:
         send_telegram_message("Неправильно спробуй ще раз")
 
