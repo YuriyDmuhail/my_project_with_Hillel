@@ -1,3 +1,5 @@
+from telegram_bot.bot_tlg  import send_telegram_message
+
 import re
 valid_codes = {"050", "066", "067", "068", "073", "093", "095", "096", "097", "098", "099"}
 
@@ -10,7 +12,7 @@ while True:
            print("можливо правильний номер, не дописав валідації ще")
            break
        else:
-           print("Невалідний номер, введи ще раз:")
+           print("Невалідний номер.")
 
     elif len(cleared_given_number) == 12 and cleared_given_number.startswith("380"):
         if cleared_given_number[2:5] in valid_codes:
@@ -19,5 +21,5 @@ while True:
         else:
            print("Невалідний номер, введи ще раз:")
     else:
-        print("Невалідний номер, введіть ще раз:")
+        send_telegram_message("Неправильно спробуй ще раз")
 
